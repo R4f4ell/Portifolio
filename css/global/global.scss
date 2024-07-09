@@ -1,3 +1,6 @@
-@use "cores.scss";
+@use "/sass/cores.scss";
 
-
+body{
+    @include body.cor-do-body;
+    background-color: body.$cor-do-body;
+}

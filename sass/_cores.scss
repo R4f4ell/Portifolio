@@ -1,2 +1,5 @@
-$cor-geral: #02FAFE!default;
-$cor-do-body: #313133!default;
+$cor-do-body: #313133;
+
+@mixin body{
+    background-color: $cor-do-body;
+}
