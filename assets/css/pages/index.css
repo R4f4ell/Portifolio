@@ -1,0 +1,145 @@
+header {
+  position: fixed;
+  height: 70px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+}
+header .logo {
+  font-weight: bold;
+  font-size: 20px;
+  color: #1c1e21;
+}
+header nav {
+  display: flex;
+  gap: 30px;
+}
+header nav a {
+  text-decoration: none;
+  color: #4b4f56;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+header nav a:hover {
+  color: #1c1e21;
+}
+header nav.active {
+  display: flex;
+}
+header .menu {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+header .menu span {
+  width: 22px;
+  height: 2px;
+  background-color: #1c1e21;
+  transition: all 0.3s;
+}
+@media (max-width: 768px) {
+  header nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: #fff;
+    display: none;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  header .menu {
+    display: flex;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(-45deg);
+  }
+}
+.sectionUm {
+  text-align: center;
+  padding-top: 120px;
+  background-color: #D9D6CD;
+  height: 400px;
+}
+.sectionUm .content-box {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sectionUm .content-box .foto-perfil {
+  background: url(/assets/images/global/perfil.jpeg);
+  background-size: cover;
+  border: 7px solid white;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  margin-top: 2em;
+}
+.sectionUm .content-box h1 {
+  font-size: 35px;
+  margin-top: 10px;
+}
+.sectionUm .content-box p {
+  font-size: 19px;
+  width: 400px;
+  color: #555;
+  margin: 20px 0 30px;
+}
+.sectionUm .content-box .contact-button {
+  width: 200px;
+  padding: 12px 25px;
+  font-weight: bold;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.sectionUm .content-box .contact-button:hover {
+  background-color: #333;
+}
+.sectionUm .content-box .icons {
+  margin-top: 15px;
+}
+.sectionUm .content-box .icons img {
+  margin: 0 6px;
+  width: 30px;
+  height: 30px;
+}
+.sectionUm .content-box .icons img:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+.sectionUm .content-box .arrow-down {
+  width: 24px;
+  height: 24px;
+  margin-top: 30px;
+  border-left: 3px solid #000;
+  border-bottom: 3px solid #000;
+  transform: rotate(-45deg);
+  animation: bounce 1.5s infinite;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../scss/pages/partials/_header.scss%22,%22../../scss/pages/partials/_sectionUm.scss%22,%22../../scss/global/_normalize.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAA;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;;AAGF;EACE;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAEA;EACE;;AAIJ;EACE;;AAIJ;EACE;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAIJ;EACE;IACE;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;;EAGF;IACE;;;;AClER;EACI;IACE;;EAEF;IACE;;;AAKN;EACI;EACA;EACA;EACA;;AAEA;EACA;EACA;EACA;EACA;;AAEE;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;;AAGF;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;;AAIJ;EACE;;AAEA;EACI;EACA;EACA;;AAEA;EACI;EACA;;AAKV;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;;AClFR;EACI;EACA;EACA;EACA%22,%22file%22:%22index.css%22%7D */

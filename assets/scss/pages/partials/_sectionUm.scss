@@ -1,0 +1,87 @@
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0) rotate(-45deg);
+    }
+    50% {
+      transform: translateY(10px) rotate(-45deg);
+    }
+  }
+
+
+.sectionUm {
+    text-align: center;
+    padding-top:120px;
+    background-color: #D9D6CD;
+    height: 400px;
+  
+    .content-box {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+      .foto-perfil {
+        background: url(/assets/images/global/perfil.jpeg);
+        background-size: cover;
+        border: 7px solid white;
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        margin-top: 2em;
+      }
+  
+      h1 {
+        font-size: 35px;
+        margin-top: 10px;
+      }
+  
+      p {
+        font-size: 19px;
+        width: 400px;
+        color: #555;
+        margin: 20px 0 30px;
+      }
+  
+      .contact-button {
+        width: 200px;
+        padding: 12px 25px;
+        font-weight: bold;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: #333;
+        }
+      }
+
+      .icons{
+        margin-top: 15px;
+
+        img{
+            margin: 0 6px;
+            width: 30px;
+            height: 30px;
+
+            &:hover{
+                transform: scale(1.05);
+                transition: .3s;
+            }
+        }
+      }
+
+      .arrow-down {
+        width: 24px;
+        height: 24px;
+        margin-top: 30px;
+        border-left: 3px solid #000;
+        border-bottom: 3px solid #000;
+        transform: rotate(-45deg);
+        animation: bounce 1.5s infinite;
+      }
+    }
+  }
+  
