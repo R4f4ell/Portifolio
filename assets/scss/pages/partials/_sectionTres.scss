@@ -1,0 +1,52 @@
+.sectionTres {
+    padding: 60px 20px;
+    background-color: #fff;
+
+    h2{
+        font-size: 35px;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+  
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+  
+      @media (max-width: 900px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+  
+      @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+      }
+    
+  
+    .card {
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+      background-color: #f9f9f9;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  
+      &:hover {
+        transform: translateY(-3px);
+      }
+  
+      img {
+        width: 70px;
+        height: auto;
+        margin-bottom: 15px;
+      }
+  
+      p {
+        font-size: 18px;
+        color: #333;
+        line-height: 1.5;
+      }
+    }
+  }
+}

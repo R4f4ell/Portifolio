@@ -1,3 +1,5 @@
+// Header
+
 document.addEventListener("DOMContentLoaded", function () {
     const toggle = document.getElementById("menu");
     const nav = document.getElementById("nav");
@@ -6,4 +8,3 @@ document.addEventListener("DOMContentLoaded", function () {
       nav.classList.toggle("active");
     });
   });
-  

@@ -42,24 +42,86 @@
           <div class="seta-baixo"></div></div>
       </section>
 
-      <section class="sectionDois">
+      <section class="sectionDois" id="sobre">
         <div>
           <h2>Sobre Mim</h2>
-            <p>Meu nome é Rafael Martins, tenho 21 anos e sou da cidade de Araci - BA. Sempre fui movido pela curiosidade em tecnologia e entender como as coisas funcionam, acredito que essa busca por conhecimento na área me deixou adaptável e capaz de aprender temas que parecem distantes.</p>
-            <p>Formado em Análise e Desenvolvimento de Sistemas, encontrei no curso o interesse em unir minhas habilidades e encontrar soluções que agradem outras pessoas.</p>
-          
-            <p>Meu objetivo é contribuir de forma proativa, seja em tarefas operacionais ou projetos em equipe, enquanto absorvo conhecimento. Durante minha formação adquiri conhecimentos sobre comunicação e desenvolvi competências como organização e resolução de problemas. Além disso, participei de atividades extracurriculares, como: grupos de estudo e eventos acadêmicos, onde pratiquei trabalho em equipe e responsabilidades.</p>
+            <p>Meu nome é Rafael Martins, tenho 21 anos e sou da cidade de Araci - BA. Sou formado em Análise e Desenvolvimento de Sistemas, encontrei no curso o interesse em unir minhas habilidades e encontrar soluções que agradem outras pessoas. Meu objetivo é contribuir de forma proativa, seja em tarefas operacionais ou projetos em equipe, enquanto absorvo conhecimento. Durante minha formação adquiri conhecimentos sobre comunicação e desenvolvi competências como organização e resolução de problemas. Além disso, participei de atividades extracurriculares, como: grupos de estudo e eventos acadêmicos, onde pratiquei trabalho em equipe e responsabilidades.</p>
           
             <p>Abaixo estarão minhas habilidades sobre a área e meus conhecimentos que obtive durante esse tempo de estudo.</p>
         </div>
       </section>
 
-      <section class="sectionTres">
+      <section class="sectionTres" id="habilidades">
         <h2>Habilidades</h2>
-      </section>
+          <div class="container">
+            
+            <div class="card">
+              <img src="/assets/images/pages/habilidades/htmlCss.png" alt="HTML e CSS">
+              <p>Grande conhecimento em Html e Css para o conteúdo e design do seu site.</p>
+            </div>
+        
+            <div class="card">
+              <img src="/assets/images/pages/habilidades/js.png" alt="JavaScript">
+              <p>Conhecimento intermediário em JS, compreendendo como uma linguagem de programação funciona.</p>
+            </div>
+        
+            <div class="card">
+              <img src="/assets/images/pages/habilidades/scss.png" alt="SCSS">
+              <p>Aperfeiçoamento dos arquivos com scss, garantindo a organização das pastas e facilitando possíveis manutenções.</p>
+            </div>
+        
+            <div class="card">
+              <img src="/assets/images/pages/habilidades/designResponsivo.png" alt="Design Responsivo">
+              <p>Experiência com design responsivo.</p>
+            </div>
+        
+            <div class="card">
+              <img src="/assets/images/pages/habilidades/designGráfico.png" alt="Design Gráfico">
+              <p>Experiência com design gráfico (Figma e Canva).</p>
+            </div>
+        
+            <div class="card">
+              <img src="/assets/images/pages/habilidades/ferramentas.png" alt="Ferramentas de Performance">
+              <p>Uso de ferramentas para melhorar a eficiência do seu site e obter um carregamento mais rápido.</p>
+            </div>
+        
+          </div>
+        </section>
 
-      <section class="sectionQuatro">
-        <h2>Projetos</h2>
+        <section class="sectionQuatro" id="servicos">
+            <h2>Serviços</h2>
+            <div class="servicos-grid">
+              <div class="card-servico" data-servico="conteudo">
+                <img src="/assets/images/pages/servicos/criacaoDeConteudo.png" alt="Criação de Conteúdo">
+                <h3>Criação de Conteúdo</h3>
+                <p>Roteiros e textos para a web, dando vida à sua marca.</p>
+              </div>
+          
+              <div class="card-servico" data-servico="gerenciamento">
+                <img src="/assets/images/pages/servicos/gerenciamentoDoSite.png" alt="Gerenciamento de Site">
+                <h3>Gerenciamento de Site</h3>
+                <p>Atualizações, otimização e manutenção contínua do site.</p>
+              </div>
+          
+              <div class="card-servico" data-servico="design">
+                <img src="/assets/images/pages/servicos/designDesenvolvimento.png" alt="Design e Desenvolvimento">
+                <h3>Design e Desenvolvimento</h3>
+                <p>Criação de sites elegantes, responsivos e funcionais.</p>
+              </div>
+            </div>
+          
+            <!-- Modal -->
+            <div class="modal" id="modal-servico">
+              <div class="modal-content">
+                <span class="fechar-modal">&times;</span>
+                <h3 id="titulo-servico"></h3>
+                <ul id="lista-servico"></ul>
+              </div>
+            </div>
+        </section>
+
+      <section class="sectionCinco">
+        <h2 id="projetos">Projetos</h2>
         <div class="projetos">
           
           <a href="https://link-do-projeto-1.com" class="card">
@@ -145,14 +207,13 @@
               </div>
             </div>
           </a>
-      
         </div>
       </section>      
 
-      <section class="sectionCinco">
-        <h2>Serviços</h2>
-      </section>
+      
 
-      <script src="js/teste.js"></script>
+      <script src="/assets/js/header.js"></script>
+      <script src="/assets/js/servicos.js"></script>
+      <script src="/assets/js/certificados.js"></script>
 </body>
 </html>
