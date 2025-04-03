@@ -1,52 +1,30 @@
+@use "../../global/variables";
+
 .sectionUm {
     text-align: center;
-    padding-top:120px;
-    background-color: #F1F1F1;
-    height: 400px;
+    padding-top:70px;
+    height: 90vh;
   
     .content-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     
-      .foto-perfil {
-        background: url(/assets/images/global/perfilDesenho_redimensionado.png);
-        background-size: cover;
-        border: 7px solid white;
-        width: 320px;
-        height: 320px;
-        border-radius: 50%;
-        margin-top: 2em;
-      }
-  
-      h1 {
-        font-size: 35px;
-        margin-top: 10px;
+    .foto-perfil {
+      background: url(/assets/images/global/logoSecao.png);
+      background-size: cover;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin-top: 2em;
       }
   
       p {
         font-size: 19px;
         width: 400px;
-        color: #555;
-        margin: 20px 0 30px;
+        margin: 20px 0; 
       }
-  
-      .button {
-        width: 200px;
-        padding: 12px 25px;
-        font-weight: bold;
-        background-color: #000;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        
-        &:hover {
-          background-color: #333;
-        }
-      }
-
+      
       .icons{
         margin-top: 15px;
 
@@ -54,20 +32,20 @@
             margin: 0 6px;
             width: 30px;
             height: 30px;
-
+            
             &:hover{
-                transform: scale(1.05);
-                transition: .3s;
+              transform: scale(1.05);
+              transition: .3s;
             }
-        }
+          }
       }
 
       .seta-baixo {
         width: 24px;
         height: 24px;
         margin-top: 25px;
-        border-left: 3px solid #000;
-        border-bottom: 3px solid #000;
+        border-left: 3px solid variables.$corGlobal;;
+        border-bottom: 3px solid variables.$corGlobal;;
         transform: rotate(-45deg);
         animation: bounce 1.5s infinite;
       }

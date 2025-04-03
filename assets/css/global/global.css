@@ -1,3 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+body {
+  position: relative;
+  background-color: #ffffff;
+  font-family: "roboto";
+  background-color: #000000;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 35px;
+  margin-top: 10px;
+  color: #ffffff;
+}
+h1 span {
+  color: #00FF00;
+}
+
+h2 {
+  font-size: 35px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.sectionUm .content-box button {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #ffffff;
+  text-shadow: none;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: transparent;
+  border: 1px solid #00FF00;
+  transition: 0.4s ease;
+  user-select: none;
+}
+.sectionUm .content-box button:hover,
+.sectionUm .content-box button :focus {
+  color: #ffffff;
+  background: #00FF00;
+  border: 1px solid #00FF00;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  box-shadow: 0 0 5px #00FF00, 0 0 7px #00FF00, 0 0 10px #00FF00, 0 0 12px #00FF00;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,4 +59,4 @@
   box-sizing: border-box;
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../scss/global/_normalize.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAA;EACI;EACA;EACA;EACA%22,%22file%22:%22global.css%22%7D */
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../scss/global/_fonts.scss%22,%22../../scss/global/_elements.scss%22,%22../../scss/global/_variables.scss%22,%22../../scss/global/_normalize.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAQ;ACER;EACI;EACA,kBCFa;EDGb;EACA,kBCLY;EDMZ,OCHO;;;ADMX;EACI;EACA;EACA,OCTO;;ADUP;EAAK,OCdG;;;ADiBZ;EACI;EACA;EACA;;;AAKI;EACI;EACA;EACA;EACA;EACA;EACA,OC3BD;ED4BC;EACA;EACA;EACA;EACA;EACA;EACA;;AACA;AAAA;EAEE,OCrCH;EDsCG,YC1CF;ED2CE;EACA;EACA;;;AAMV;EACI;EACA;EACA;;;AEtDR;EACI;EACA;EACA;EACA%22,%22file%22:%22global.css%22%7D */

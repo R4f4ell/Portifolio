@@ -1,0 +1,57 @@
+@use "../global/variables";
+
+body{
+    position: relative;
+    background-color: variables.$corFundoBranco;
+    font-family: 'roboto';   
+    background-color: variables.$corFundoPreto;
+    color: variables.$corTexto;
+}
+
+h1 {
+    font-size: 35px;
+    margin-top: 10px;
+    color: variables.$corTexto;
+    span{color: variables.$corGlobal;}
+}
+
+h2{
+    font-size: 35px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.sectionUm{
+    .content-box{      
+        button {
+            padding: 10px 20px;
+            text-transform: uppercase;
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: 500;
+            color: variables.$corTexto;
+            text-shadow: none;
+            background: transparent;
+            cursor: pointer;
+            box-shadow: transparent;
+            border: 1px solid variables.$corGlobal;
+            transition: 0.4s ease;
+            user-select: none;
+            &:hover,
+            :focus {
+              color: variables.$corTexto;
+              background: variables.$corGlobal;
+              border: 1px solid #00FF00;
+              text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+              box-shadow: 0 0 5px variables.$corGlobal, 0 0 7px variables.$corGlobal, 0 0 10px variables.$corGlobal, 0 0 12px variables.$corGlobal;
+            }
+          } 
+        }
+    }
+
+    .footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 18px;
+      }
+      

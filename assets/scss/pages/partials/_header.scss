@@ -1,3 +1,5 @@
+@use "../../global/variables";
+
 header {
     position: fixed;
     height: 70px;
@@ -13,7 +15,6 @@ header {
     .logo {
       font-weight: bold;
       font-size: 30px;
-      color: #1c1e21;
     }
   
     nav {
@@ -22,12 +23,12 @@ header {
   
       a {
         text-decoration: none;
-        color: #4b4f56;
-        font-size: 15px;
+        color: variables.$corFundoPreto;
+        font-size: 17px;
         transition: color 0.3s;
   
         &:hover {
-          color: #1c1e21;
+          color: variables.$corGlobal;
         }
       }
   
