@@ -1,72 +1,109 @@
 @use "../../global/variables";
 
 header {
-    position: fixed;
-    height: 70px;
-    width: 100vw;
+  position: fixed;
+  height: 70px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  background-color: variables.$corFundoHeader;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  z-index: 100;
+
+  .logo {
+    font-weight: bold;
+    font-size: 30px;
+  }
+
+  nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 40px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    z-index: 10;
-  
-    .logo {
-      font-weight: bold;
-      font-size: 30px;
-    }
-  
-    nav {
-      display: flex;
-      gap: 30px;
-  
-      a {
-        text-decoration: none;
-        color: variables.$corFundoPreto;
-        font-size: 17px;
-        transition: color 0.3s;
-  
-        &:hover {
-          color: variables.$corGlobal;
+    gap: 30px;
+
+    a {
+      position: relative;
+      text-decoration: none;
+      color: variables.$corTexto;
+      font-size: 17px;
+      transition: color 0.3s;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 0%;
+        height: 2px;
+        background-color: variables.$corGlobal;
+        transition: width 0.4s ease-in-out;
+      }
+
+      &:hover {
+        color: variables.$corGlobal;
+
+        &::after {
+          width: 100%;
         }
       }
-  
-      &.active {
-        display: flex;
-      }
     }
-  
-    .menu {
-      display: none;
-      flex-direction: column;
-      gap: 4px;
-      cursor: pointer;
-  
-      span {
-        width: 22px;
-        height: 2px;
-        background-color: #1c1e21;
-        transition: all 0.3s;
-      }
+
+    &.active {
+      display: flex;
     }
-  
-    @media (max-width: 768px) {
-      nav {
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        flex-direction: column;
-        background-color: #fff;
-        display: none;
-        padding: 10px 20px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    z-index: 101;
+
+    span {
+      width: 22px;
+      height: 2px;
+      background-color: #1c1e21;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &.active {
+      span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
       }
-  
-      .menu {
-        display: flex;
+
+      span:nth-child(2) {
+        opacity: 0;
+      }
+
+      span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
       }
     }
   }
-  
+
+  @media (max-width: 768px) {
+    nav {
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      flex-direction: column;
+      background-color: rgba(17, 15, 15, 0.856);
+      backdrop-filter: blur(10px);
+      display: none;
+      padding: 10px 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    nav.active {
+      display: flex;
+    }
+
+    .menu {
+      display: flex;
+    }
+  }
+}

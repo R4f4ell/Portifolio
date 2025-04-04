@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 body {
-  position: relative;
-  background-color: #ffffff;
   font-family: "roboto";
   background-color: #000000;
   color: #ffffff;
@@ -46,6 +44,35 @@ h2 {
   box-shadow: 0 0 5px #00FF00, 0 0 7px #00FF00, 0 0 10px #00FF00, 0 0 12px #00FF00;
 }
 
+.scroll-arrow-up {
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: rgba(0, 0, 0, 0.397);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.scroll-arrow-up.visible {
+  opacity: 1;
+  visibility: visible;
+}
+.scroll-arrow-up img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}
+
 .footer {
   text-align: center;
   padding: 20px;
@@ -59,4 +86,4 @@ h2 {
   box-sizing: border-box;
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../scss/global/_fonts.scss%22,%22../../scss/global/_elements.scss%22,%22../../scss/global/_variables.scss%22,%22../../scss/global/_normalize.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAQ;ACER;EACI;EACA,kBCFa;EDGb;EACA,kBCLY;EDMZ,OCHO;;;ADMX;EACI;EACA;EACA,OCTO;;ADUP;EAAK,OCdG;;;ADiBZ;EACI;EACA;EACA;;;AAKI;EACI;EACA;EACA;EACA;EACA;EACA,OC3BD;ED4BC;EACA;EACA;EACA;EACA;EACA;EACA;;AACA;AAAA;EAEE,OCrCH;EDsCG,YC1CF;ED2CE;EACA;EACA;;;AAMV;EACI;EACA;EACA;;;AEtDR;EACI;EACA;EACA;EACA%22,%22file%22:%22global.css%22%7D */
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../scss/global/_fonts.scss%22,%22../../scss/global/_elements.scss%22,%22../../scss/global/_variables.scss%22,%22../../scss/global/_normalize.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAQ;ACER;EACI;EACA,kBCHY;EDIZ,OCDO;;;ADIX;EACI;EACA;EACA,OCPO;;ADQP;EAAK,OCZG;;;ADeZ;EACI;EACA;EACA;;;AAKI;EACI;EACA;EACA;EACA;EACA;EACA,OCzBD;ED0BC;EACA;EACA;EACA;EACA;EACA;EACA;;AACA;AAAA;EAEE,OCnCH;EDoCG,YCxCF;EDyCE;EACA;EACA;;;AAMV;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;;;AAKN;EACI;EACA;EACA;;;AEpFR;EACI;EACA;EACA;EACA%22,%22file%22:%22global.css%22%7D */

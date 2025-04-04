@@ -1,8 +1,6 @@
 @use "../global/variables";
 
 body{
-    position: relative;
-    background-color: variables.$corFundoBranco;
     font-family: 'roboto';   
     background-color: variables.$corFundoPreto;
     color: variables.$corTexto;
@@ -48,6 +46,38 @@ h2{
           } 
         }
     }
+
+    .scroll-arrow-up {
+        width: 60px;
+        height: 60px;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: rgba(0, 0, 0, 0.397);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+      
+        &.visible {
+          opacity: 1;
+          visibility: visible;
+        }
+      
+        img {
+          width: 30px;
+          height: 30px;
+          object-fit: contain;
+          pointer-events: none;
+          user-select: none;
+        }
+      }      
+      
 
     .footer {
         text-align: center;

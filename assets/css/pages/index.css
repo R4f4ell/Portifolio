@@ -7,9 +7,11 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 40px;
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.397);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  z-index: 10;
+  z-index: 100;
 }
 header .logo {
   font-weight: bold;
@@ -20,13 +22,27 @@ header nav {
   gap: 30px;
 }
 header nav a {
+  position: relative;
   text-decoration: none;
-  color: #000000;
+  color: #ffffff;
   font-size: 17px;
   transition: color 0.3s;
 }
+header nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background-color: #00FF00;
+  transition: width 0.4s ease-in-out;
+}
 header nav a:hover {
   color: #00FF00;
+}
+header nav a:hover::after {
+  width: 100%;
 }
 header nav.active {
   display: flex;
@@ -36,12 +52,22 @@ header .menu {
   flex-direction: column;
   gap: 4px;
   cursor: pointer;
+  z-index: 101;
 }
 header .menu span {
   width: 22px;
   height: 2px;
   background-color: #1c1e21;
-  transition: all 0.3s;
+  transition: all 0.3s ease-in-out;
+}
+header .menu.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+header .menu.active span:nth-child(2) {
+  opacity: 0;
+}
+header .menu.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 @media (max-width: 768px) {
   header nav {
@@ -50,10 +76,14 @@ header .menu span {
     left: 0;
     width: 100%;
     flex-direction: column;
-    background-color: #fff;
+    background-color: rgba(17, 15, 15, 0.856);
+    backdrop-filter: blur(10px);
     display: none;
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  header nav.active {
+    display: flex;
   }
   header .menu {
     display: flex;
@@ -375,7 +405,7 @@ header .menu span {
 .sectionSeis .carousel .carousel-slide h3 {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #9be9a8;
+  color: #ffffff;
   padding-bottom: 10px;
 }
 .sectionSeis .carousel .carousel-slide:hover img {
@@ -387,7 +417,7 @@ header .menu span {
   transform: translateY(-50%);
   background-color: transparent;
   border: none;
-  color: #9be9a8;
+  color: #00FF00;
   font-size: 2.5rem;
   cursor: pointer;
   z-index: 10;
@@ -416,7 +446,7 @@ header .menu span {
   transition: background-color 0.3s;
 }
 .sectionSeis .carousel-dots .dot.active {
-  background-color: #9be9a8;
+  background-color: #00FF00;
 }
 .sectionSeis .zoom-modal {
   display: none;
@@ -451,8 +481,6 @@ header .menu span {
 }
 
 body {
-  position: relative;
-  background-color: #ffffff;
   font-family: "roboto";
   background-color: #000000;
   color: #ffffff;
@@ -497,6 +525,35 @@ h2 {
   box-shadow: 0 0 5px #00FF00, 0 0 7px #00FF00, 0 0 10px #00FF00, 0 0 12px #00FF00;
 }
 
+.scroll-arrow-up {
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: rgba(0, 0, 0, 0.397);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.scroll-arrow-up.visible {
+  opacity: 1;
+  visibility: visible;
+}
+.scroll-arrow-up img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}
+
 .footer {
   text-align: center;
   padding: 20px;
@@ -510,4 +567,4 @@ h2 {
   box-sizing: border-box;
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../scss/global/_fonts.scss%22,%22../../scss/pages/partials/_header.scss%22,%22../../scss/global/_variables.scss%22,%22../../scss/pages/partials/_sectionUm.scss%22,%22../../scss/pages/partials/_sectionDois.scss%22,%22../../scss/pages/partials/_sectionTres.scss%22,%22../../scss/pages/partials/_sectionQuatro.scss%22,%22../../scss/pages/partials/_sectionCinco.scss%22,%22../../scss/pages/partials/_sectionSeis.scss%22,%22../../scss/global/_elements.scss%22,%22../../scss/global/_normalize.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAQ;ACER;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;;AAGF;EACE;EACA;;AAEA;EACE;EACA,OCxBQ;EDyBR;EACA;;AAEA;EACE,OC9BE;;ADkCN;EACE;;AAIJ;EACE;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAIJ;EACE;IACE;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;;EAGF;IACE;;;;AEjER;EACI;EACA;EACA;;AAEA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;;AAGA;EACE;EACA;EACA;;AAGF;EACE;;AAEA;EACI;EACA;EACA;;AAEA;EACE;EACA;;AAKR;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;;AAKN;EACI;IACE;;EAEF;IACE;;;AC3DR;EACI;EACA;;AAEA;EACI;EACA;EACA;EACA;EACA;EACA;;AACA;EACI;EACA;EACA;;;ACdZ;EACI;;AAEA;EACE;EACA;EACA;EACA;EACA;;AAEA;EAPF;IAQI;;;AAGF;EAXF;IAYI;;;AAIJ;EACE;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;;AAGF;EACE;EACA;EACA;;AAGF;EACE;EACA;EACA;;;ACxCR;EACI;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;;AAEA;EARF;IASI;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;;AAGF;EACE;EACA;;AAGF;EACE;EACA;EACA;;AAGF;EACE;EACA;;AAKN;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;;AAGF;EACE;;AAEA;EACE;EACA;EACA;;AAIJ;EACE;EACA;EACA;EACA;EACA;;;AC1FV;EACI;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;;AAGF;EACE;EACA;EACA;;AAGF;EACE;;AAEA;EACE;EACA;EACA;;AAGF;EACE;EACA;EACA;;AAGF;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAEA;EACE;EACA;;AAGF;EACE;EACA;;AAGF;EACE;EACA;;AAGF;EACE;EACA;;;AC5Ed;EACI;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;;AAGF;EACE;;AAIJ;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EAAS;;AACT;EAAS;;AAIb;EACE;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;;AAKN;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;;AAIJ;EACE;;AAGF;EACE;IACE;;EAEA;IACE;;EAGF;IACE;IACA;;;;AC/HV;EACI;EACA,kBPFa;EOGb;EACA,kBPLY;EOMZ,OPHO;;;AOMX;EACI;EACA;EACA,OPTO;;AOUP;EAAK,OPdG;;;AOiBZ;EACI;EACA;EACA;;;AAKI;EACI;EACA;EACA;EACA;EACA;EACA,OP3BD;EO4BC;EACA;EACA;EACA;EACA;EACA;EACA;;AACA;AAAA;EAEE,OPrCH;EOsCG,YP1CF;EO2CE;EACA;EACA;;;AAMV;EACI;EACA;EACA;;;ACtDR;EACI;EACA;EACA;EACA%22,%22file%22:%22index.css%22%7D */
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../scss/global/_fonts.scss%22,%22../../scss/pages/partials/_header.scss%22,%22../../scss/global/_variables.scss%22,%22../../scss/pages/partials/_sectionUm.scss%22,%22../../scss/pages/partials/_sectionDois.scss%22,%22../../scss/pages/partials/_sectionTres.scss%22,%22../../scss/pages/partials/_sectionQuatro.scss%22,%22../../scss/pages/partials/_sectionCinco.scss%22,%22../../scss/pages/partials/_sectionSeis.scss%22,%22../../scss/global/_elements.scss%22,%22../../scss/global/_normalize.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAQ;ACER;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA,kBCJe;EDKf;EACA;EACA;EACA;;AAEA;EACE;EACA;;AAGF;EACE;EACA;;AAEA;EACE;EACA;EACA,OCxBK;EDyBL;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;EACA,kBCvCI;EDwCJ;;AAGF;EACE,OC5CI;;AD8CJ;EACE;;AAKN;EACE;;AAIJ;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAIA;EACE;;AAGF;EACE;;AAGF;EACE;;AAKN;EACE;IACE;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;;EAGF;IACE;;EAGF;IACE;;;;AEvGN;EACI;EACA;EACA;;AAEA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;;AAGA;EACE;EACA;EACA;;AAGF;EACE;;AAEA;EACI;EACA;EACA;;AAEA;EACE;EACA;;AAKR;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;;AAKN;EACI;IACE;;EAEF;IACE;;;AC3DR;EACI;EACA;;AAEA;EACI;EACA;EACA;EACA;EACA;EACA;;AACA;EACI;EACA;EACA;;;ACdZ;EACI;;AAEA;EACE;EACA;EACA;EACA;EACA;;AAEA;EAPF;IAQI;;;AAGF;EAXF;IAYI;;;AAIJ;EACE;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;;AAGF;EACE;EACA;EACA;;AAGF;EACE;EACA;EACA;;;ACxCR;EACI;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;;AAEA;EARF;IASI;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;;AAGF;EACE;EACA;;AAGF;EACE;EACA;EACA;;AAGF;EACE;EACA;;AAKN;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;;AAGF;EACE;;AAEA;EACE;EACA;EACA;;AAIJ;EACE;EACA;EACA;EACA;EACA;;;AC1FV;EACI;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;;AAGF;EACE;EACA;EACA;;AAGF;EACE;;AAEA;EACE;EACA;EACA;;AAGF;EACE;EACA;EACA;;AAGF;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAEA;EACE;EACA;;AAGF;EACE;EACA;;AAGF;EACE;EACA;;AAGF;EACE;EACA;;;AC5Ed;EACI;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA,ON7CC;EM8CD;;AAGF;EACE;;AAIJ;EACE;EACA;EACA;EACA;EACA;EACA,ONhEI;EMiEJ;EACA;EACA;EACA;EACA;EACA;;AAEA;EAAS;;AACT;EAAS;;AAIb;EACE;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE,kBN5FE;;AMiGR;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;;AAIJ;EACE;;AAGF;EACE;IACE;;EAEA;IACE;;EAGF;IACE;IACA;;;;AC/HV;EACI;EACA,kBPHY;EOIZ,OPDO;;;AOIX;EACI;EACA;EACA,OPPO;;AOQP;EAAK,OPZG;;;AOeZ;EACI;EACA;EACA;;;AAKI;EACI;EACA;EACA;EACA;EACA;EACA,OPzBD;EO0BC;EACA;EACA;EACA;EACA;EACA;EACA;;AACA;AAAA;EAEE,OPnCH;EOoCG,YPxCF;EOyCE;EACA;EACA;;;AAMV;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;;;AAKN;EACI;EACA;EACA;;;ACpFR;EACI;EACA;EACA;EACA%22,%22file%22:%22index.css%22%7D */

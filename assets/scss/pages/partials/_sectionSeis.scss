@@ -47,7 +47,7 @@
         h3 {
           font-size: 1.25rem;
           font-weight: 600;
-          color: #9be9a8;
+          color: variables.$corTexto;
           padding-bottom: 10px;
         }
   
@@ -62,7 +62,7 @@
         transform: translateY(-50%);
         background-color: transparent;
         border: none;
-        color: #9be9a8;
+        color: variables.$corGlobal;
         font-size: 2.5rem;
         cursor: pointer;
         z-index: 10;
@@ -90,7 +90,7 @@
         transition: background-color 0.3s;
   
         &.active {
-          background-color: #9be9a8;
+          background-color: variables.$corGlobal;
         }
       }
     }
