@@ -7,20 +7,108 @@ body{
 }
 
 h1 {
-    font-size: 35px;
-    margin-top: 10px;
-    color: variables.$corTexto;
-    span{color: variables.$corGlobal;}
+  font-family: 'Rajdhani';
+  font-size: 40px;
+  font-weight: 900;
+  margin-top: 10px;
+  letter-spacing: 1px;
+  color: variables.$corTexto;
+  text-transform: uppercase;
+  display: inline-block;
+  animation: fadeIn 1s ease-out forwards;
+
+  span {
+    color: variables.$corGlobal;
+    text-shadow: 0 0 10px variables.$corGlobal;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 5px variables.$corGlobal;
+    }
+    to {
+      text-shadow: 0 0 15px variables.$corGlobal, 0 0 30px variables.$corGlobal;
+    }
+  }
 }
 
-h2{
-    font-size: 35px;
-    margin-bottom: 50px;
-    text-align: center;
-}
+h2 {
+  font-size: 35px;
+  margin: 150px 0 50px 0;
+  text-align: center;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  animation: enterTitle 1s ease-out forwards;
+  background: linear-gradient(to right, variables.$corGlobal 0%, variables.$corTexto 65%);
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
 
-.sectionUm{
-    .content-box{      
+  &::before {
+    content: '✦';
+    position: absolute;
+    left: -30px;
+    color: variables.$corGlobal;
+    font-size: 20px;
+    animation: blink 1.5s infinite;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, variables.$corGlobal, transparent);
+    margin: 12px auto 0;
+    border-radius: 2px;
+    animation: slideIn 1s ease-out forwards;
+  }
+
+  @keyframes enterTitle {
+    0% {
+      opacity: 0;
+      transform: scale(0.95) translateY(15px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+  
+  @keyframes slideIn {
+    from {
+      width: 0;
+      opacity: 0;
+    }
+    to {
+      width: 80px;
+      opacity: 1;
+    }
+  }
+}
+   
         button {
             padding: 10px 20px;
             text-transform: uppercase;
@@ -44,8 +132,6 @@ h2{
               box-shadow: 0 0 5px variables.$corGlobal, 0 0 7px variables.$corGlobal, 0 0 10px variables.$corGlobal, 0 0 12px variables.$corGlobal;
             }
           } 
-        }
-    }
 
     .scroll-arrow-up {
         width: 60px;
@@ -77,11 +163,11 @@ h2{
           user-select: none;
         }
       }      
-      
 
     .footer {
         text-align: center;
         padding: 20px;
+        margin-top: 50px;
         font-size: 18px;
       }
       

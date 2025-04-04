@@ -1,12 +1,12 @@
 .sectionCinco{
     text-align: center;
-    padding: 60px 20px;
   
     .projetos {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
+      row-gap: 70px;
     }
   
     .card {
@@ -21,7 +21,6 @@
       transition: transform 0.3s ease;
       display: flex;
       flex-direction: column;
-      margin-bottom: 70px;
   
       &:hover {
         transform: translateY(-3px);
@@ -81,6 +80,10 @@
           }
         }
       }
+    }
+
+    button{
+      margin-top: 50px;
     }
   }
   
