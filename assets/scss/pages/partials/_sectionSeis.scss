@@ -55,7 +55,7 @@
           transform: scale(1.01);
         }
       }
-  
+
       .nav {
         position: absolute;
         top: 50%;
@@ -64,13 +64,11 @@
         border: none;
         color: variables.$corGlobal;
         font-size: 2.5rem;
-        cursor: pointer;
         z-index: 10;
-        padding: 0.5rem 1rem;
         border-radius: 50%;
         transition: background 0.2s;
   
-        &.prev { left: 10px; }
+        &.prev { left: 10px;}
         &.next { right: 10px; }
       }
     }
