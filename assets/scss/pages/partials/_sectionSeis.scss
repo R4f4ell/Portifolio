@@ -1,133 +1,137 @@
 @use "../../global/variables";
 
 .sectionSeis {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0 2rem;
-  
-    .carousel {
-      width: 100%;
-      max-width: 1000px;
-      aspect-ratio: 16 / 9;
-      position: relative;
-      overflow: hidden;
-      border-radius: 20px;
-      box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
-  
-      .carousel-track {
-        display: flex;
-        height: 100%;
-        transition: transform 0.6s ease-in-out;
-      }
-  
-      .carousel-slide {
-        flex: 0 0 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        text-align: center;
-  
-        img {
-          width: 100%;
-          max-height: 90%;
-          object-fit: contain;
-          border-radius: 16px;
-          margin-bottom: 1rem;
-          box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
-          transition: transform 0.3s ease;
-          cursor: zoom-in;
-        }
-  
-        h3 {
-          font-size: 1.25rem;
-          font-weight: 600;
-          color: variables.$corTexto;
-          padding-bottom: 10px;
-        }
-  
-        &:hover img {
-          transform: scale(1.01);
-        }
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+
+  .carousel {
+    width: 100%;
+    max-width: 1000px;
+    aspect-ratio: 16 / 9;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+
+    .carousel-track {
+      display: flex;
+      height: 100%;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .carousel-slide {
+      flex: 0 0 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+
+      img {
+        width: 100%;
+        max-height: 90%;
+        object-fit: contain;
+        border-radius: 16px;
+        margin-bottom: 1rem;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease;
+        cursor: zoom-in;
       }
 
-      .nav {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: transparent;
-        border: none;
-        color: variables.$corGlobal;
-        font-size: 2.5rem;
-        z-index: 10;
-        border-radius: 50%;
-        transition: background 0.2s;
-  
-        &.prev { left: 10px;}
-        &.next { right: 10px; }
+      h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: variables.$corTexto;
+        padding-bottom: 10px;
+      }
+
+      &:hover img {
+        transform: scale(1.01);
       }
     }
-  
-    .carousel-dots {
-      margin-top: .5rem;
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-  
-      .dot {
-        width: 10px;
-        height: 10px;
-        background-color: #555;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: background-color 0.3s;
-  
-        &.active {
-          background-color: variables.$corGlobal;
-        }
+
+    .nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: transparent;
+      border: none;
+      color: variables.$corGlobal;
+      font-size: 2.5rem;
+      z-index: 10;
+      border-radius: 50%;
+      transition: background 0.2s;
+
+      &.prev {
+        left: 10px;
       }
-    }
-  
-    .zoom-modal {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.9);
-      justify-content: center;
-      align-items: center;
-      z-index: 999;
-  
-      img {
-        max-width: 90vw;
-        max-height: 90vh;
-        border-radius: 12px;
-        box-shadow: 0 0 20px black;
-        cursor: zoom-out;
-      }
-    }
-  
-    .zoom-modal.active {
-      display: flex;
-    }
-  
-    @media (max-width: 768px) {
-      .carousel {
-        aspect-ratio: 4 / 3;
-  
-        .carousel-slide h3 {
-          font-size: 1rem;
-        }
-  
-        .nav {
-          font-size: 2rem;
-          padding: 0.25rem 0.5rem;
-        }
+
+      &.next {
+        right: 10px;
       }
     }
   }
-  
+
+  .carousel-dots {
+    margin-top: .5rem;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      background-color: #555;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &.active {
+        background-color: variables.$corGlobal;
+      }
+    }
+  }
+
+  .zoom-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+
+    img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 12px;
+      box-shadow: 0 0 20px black;
+      cursor: zoom-out;
+    }
+  }
+
+  .zoom-modal.active {
+    display: flex;
+  }
+
+  @media (max-width: 768px) {
+    .carousel {
+      aspect-ratio: 4 / 3;
+
+      .carousel-slide h3 {
+        font-size: 1rem;
+      }
+
+      .nav {
+        font-size: 2rem;
+        padding: 0.25rem 0.5rem;
+      }
+    }
+  }
+}

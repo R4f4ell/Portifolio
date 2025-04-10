@@ -1,18 +1,19 @@
 @use "../../global/variables";
 
-.sectionDois{
+.sectionDois {
     display: flex;
     justify-content: center;
 
-    div{
+    div {
         text-align: center;
         display: flex;
         align-items: center;
         flex-direction: column;
-        p{
+
+        p {
             width: 60%;
             margin: 10px 0;
             font-size: 18px;
         }
-    }    
+    }
 }
