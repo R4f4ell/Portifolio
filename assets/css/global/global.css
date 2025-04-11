@@ -1,0 +1,180 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+body {
+  font-family: "roboto";
+  background-color: #000000;
+  color: #ffffff;
+}
+
+h1 {
+  font-family: "Rajdhani";
+  font-size: 40px;
+  font-weight: 900;
+  margin-top: 10px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-transform: uppercase;
+  display: inline-block;
+  animation: fadeIn 1s ease-out forwards;
+}
+h1 span {
+  color: #00FF00;
+  text-shadow: 0 0 10px #00FF00;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #00FF00;
+  }
+  to {
+    text-shadow: 0 0 15px #00FF00, 0 0 30px #00FF00;
+  }
+}
+
+h2 {
+  font-size: 35px;
+  margin: 150px 0 50px 0;
+  text-align: center;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  animation: enterTitle 1s ease-out forwards;
+  background: linear-gradient(to right, #00FF00 0%, #ffffff 65%);
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+h2::before {
+  content: "✦";
+  position: absolute;
+  left: -30px;
+  color: #00FF00;
+  font-size: 20px;
+  animation: blink 1.5s infinite;
+}
+h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #00FF00, transparent);
+  margin: 12px auto 0;
+  border-radius: 2px;
+  animation: slideIn 1s ease-out forwards;
+}
+@keyframes enterTitle {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+@keyframes slideIn {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 80px;
+    opacity: 1;
+  }
+}
+
+button {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #ffffff;
+  text-shadow: none;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: transparent;
+  border: 1px solid #00FF00;
+  transition: 0.4s ease;
+  user-select: none;
+}
+button:hover,
+button :focus {
+  color: #ffffff;
+  background: #00FF00;
+  border: 1px solid #00FF00;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  box-shadow: 0 0 5px #00FF00, 0 0 7px #00FF00, 0 0 10px #00FF00, 0 0 12px #00FF00;
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+}
+
+.scroll-arrow-up {
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: rgba(0, 0, 0, 0.397);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.scroll-arrow-up.visible {
+  opacity: 1;
+  visibility: visible;
+}
+.scroll-arrow-up img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  font-size: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../scss/global/_fonts.scss%22,%22../../scss/global/_elements.scss%22,%22../../scss/global/_variables.scss%22,%22../../scss/global/_normalize.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22;AAAQ;ACER;EACE;EACA,kBCHc;EDId,OCDS;;;ADIX;EACE;EACA;EACA;EACA;EACA;EACA,OCVS;EDWT;EACA;EACA;;AAEA;EACE,OCpBQ;EDqBR;EACA;;AAGF;EACE;IACE;IACA;;EAGF;IACE;IACA;;;AAIJ;EACE;IACE;;EAGF;IACE;;;;AAKN;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA,OCrEQ;EDsER;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;IACE;IACA;;EAGF;IACE;IACA;;;AAIJ;EAEE;IAEE;;EAGF;IACE;;;AAIJ;EACE;IACE;IACA;;EAGF;IACE;IACA;;;;AAKN;EACE;EACA;EACA;EACA;EACA;EACA,OC5HS;ED6HT;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;AAAA;EAEE,OCvIO;EDwIP,YC5IQ;ED6IR;EACA;EACA;;;AAIJ;EACE;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;;;AAIJ;EACE;EACA;EACA;EACA;;;AE3LF;EACI;EACA;EACA;EACA%22,%22file%22:%22global.css%22%7D */
