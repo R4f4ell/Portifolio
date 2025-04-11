@@ -1,1 +1,1 @@
-function scrollToTop(){window.scrollTo({top:0,behavior:"smooth"})}window.addEventListener("scroll",()=>{let o=document.querySelector(".scroll-arrow-up");window.scrollY>600?o.classList.add("visible"):o.classList.remove("visible")}),window.scrollToTop=scrollToTop;
+!function(){const o=document.querySelector(".scroll-arrow-up");window.addEventListener("scroll",(()=>{o&&(window.scrollY>600?o.classList.add("visible"):o.classList.remove("visible"))})),window.scrollToTop=()=>{window.scrollTo({top:0,behavior:"smooth"})}}();

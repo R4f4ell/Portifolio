@@ -5,17 +5,16 @@
   justify-content: center;
   align-items: center;
   padding-top: 80px;
-  
+
   .content-box {
     display: flex;
     flex-direction: column;
     align-items: center;
 
     @media screen and (max-width: 575px) {
-      width: 90%;  
-    }    
-    
-    
+      width: 90%;
+    }
+
     .foto-perfil {
       background: url(/assets/images/global/logoSecao.png);
       background-size: cover;
@@ -29,13 +28,13 @@
       font-size: 19px;
       width: 400px;
       margin: 20px 0;
+      text-align: center;
 
       @media screen and (max-width: 575px) {
         width: 90%;
-        text-align: center;
-      } 
+      }
     }
-    
+
     .icons {
       margin-top: 15px;
 

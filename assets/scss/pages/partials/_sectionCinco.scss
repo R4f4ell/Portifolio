@@ -22,6 +22,14 @@
     display: flex;
     flex-direction: column;
 
+    @media (max-width: 450px) {
+      width: 90%;
+    }
+
+    @media (max-width: 900px) {
+      background-color: transparent;
+    }
+
     &:hover {
       transform: translateY(-3px);
     }
@@ -30,6 +38,7 @@
       width: 100%;
       height: 180px;
       object-fit: cover;
+      display: block;
     }
 
     .conteudo {
@@ -79,6 +88,14 @@
           }
         }
       }
+    }
+
+  }
+
+  // 📱 Mobile: esconde conteúdo textual
+  @media (max-width: 900px) {
+    .conteudo {
+      display: none;
     }
   }
 

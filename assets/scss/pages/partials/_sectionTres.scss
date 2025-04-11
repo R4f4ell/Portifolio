@@ -1,4 +1,4 @@
-@use "../../global/variables";
+@use"../../global/variables";
 
 .sectionTres {
   width: 100%;
@@ -7,20 +7,18 @@
   flex-direction: column;
   align-items: center;
 
-  
   .container {
     gap: 40px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
-    @media (max-width: 900px) {
+    @media screen and (max-width: 900px) {
       grid-template-columns: repeat(2, 1fr);
     }
-    
-    @media (max-width: 600px) {
+
+    @media screen and (max-width: 600px) {
       grid-template-columns: 1fr;
     }
-    
 
     .card {
       position: relative;
@@ -34,24 +32,53 @@
       justify-content: center;
       overflow: hidden;
       perspective: 1000px;
-      box-shadow: 0 0 5px variables.$corGlobal, 0 0 7px variables.$corGlobal, 0 0 10px variables.$corGlobal, 0 0 12px variables.$corGlobal;
+      box-shadow: 0 0 5px variables.$corGlobal,
+        0 0 7px variables.$corGlobal,
+        0 0 10px variables.$corGlobal,
+        0 0 12px variables.$corGlobal;
       transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-      @media screen and (max-width: 450px) {   
+      @media screen and (max-width: 450px) {
         width: 250px;
-        height: 210px;
-      } 
+        height: 360px;
+        margin: 10px 0;
+      }
 
+      @media screen and (min-width: 451px) and (max-width: 600px) {
+        height: 400px;
+      }
+
+      @media screen and (min-width: 601px) and (max-width: 900px) {
+        height: 440px;
+      }
+
+      @media screen and (min-width: 901px) {
+        &:hover {
+          transform: scale(1.01);
+          box-shadow: 0 0 10px variables.$corGlobal,
+            0 0 12px variables.$corGlobal,
+            0 0 15px variables.$corGlobal,
+            0 0 20px variables.$corGlobal;
+        }
+
+        &:hover .card__content {
+          transform: rotateX(0deg);
+        }
+
+        &:hover img {
+          scale: 0;
+        }
+      }
     }
 
     .card img {
       width: 90px;
       transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
 
-    .card:hover {
-      transform: scale(1.01);
-      box-shadow: 0 0 10px variables.$corGlobal, 0 0 12px variables.$corGlobal, 0 0 15px variables.$corGlobal, 0 0 20px variables.$corGlobal;
+      // Remove o ícone no mobile
+      @media screen and (max-width: 900px) {
+        display: none;
+      }
     }
 
     .card__content {
@@ -68,10 +95,13 @@
       transform: rotateX(-90deg);
       transform-origin: bottom;
       transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
 
-    .card:hover .card__content {
-      transform: rotateX(0deg);
+      @media screen and (max-width: 900px) {
+        transform: none;
+        position: static;
+        background-color: transparent;
+        text-align: center;
+      }
     }
 
     .card__title {
@@ -79,13 +109,13 @@
       font-weight: 700;
     }
 
-    .card:hover img {
-      scale: 0;
-    }
-
     .card__description {
       font-size: 16px;
       line-height: 1.2;
+
+      @media screen and (max-width: 900px) {
+        font-size: 18px;
+      }
     }
   }
 

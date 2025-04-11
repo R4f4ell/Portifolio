@@ -1,15 +1,13 @@
 @use "../../global/variables";
 
 .sectionSeis {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 2rem;
 
   .carousel {
-    width: 100%;
+    width: 90%;
     max-width: 1000px;
     aspect-ratio: 16 / 9;
     position: relative;
